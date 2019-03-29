@@ -41,8 +41,8 @@ class AddStartupTables extends Migration
             $table->bigIncrements('id');
             $table->string('nom',20)->unique();
             $table->unsignedBigInteger('parcours_id');
-            $table->unsignedBigInteger('previous_annee_id')->nullable();
-            $table->unsignedBigInteger('next_annee_id')->nullable();
+            $table->unsignedBigInteger('previous_cycle_id')->nullable();
+            $table->unsignedBigInteger('next_cycle_id')->nullable();
             $table->softDeletes();
         });
 
@@ -50,7 +50,7 @@ class AddStartupTables extends Migration
             //S1-S2-S3-S4-...
             $table->bigIncrements('id');
             $table->string('nom',20)->unique();
-            $table->unsignedBigInteger('annee_id');
+            $table->unsignedBigInteger('cycle_id');
             $table->softDeletes();
         });
 
@@ -63,7 +63,7 @@ class AddStartupTables extends Migration
             $table->string('email',20)->unique();
             $table->unsignedBigInteger('departement_id');
             $table->unsignedBigInteger('filiere_id');
-            $table->unsignedBigInteger('annee_id');
+            $table->unsignedBigInteger('cycle_id');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -114,6 +114,7 @@ class AddStartupTables extends Migration
 
         Schema::create('notes',function (Blueprint $table){
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('annee_id');
             $table->unsignedBigInteger('etudiant_id');
 
             $table->unsignedBigInteger('filiere_id')->nullable();
