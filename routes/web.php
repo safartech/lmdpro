@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('etudiants', function () {
+    return view('app.etudiants');
+});
+
+
+
+Route::get('/test', function () {
+    return view('layouts.default');
+});
 
 Route::group(['prefix' => 'cosmos'], function () {
     Voyager::routes();

@@ -9,4 +9,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-.idea
+vendor.zip
+/public/js/base_url.js
+/public/app-assets
+\.idea/
