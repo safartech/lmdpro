@@ -59,6 +59,7 @@
 <!-- BEGIN VENDOR JS-->
 <!-- BEGIN PAGE VENDOR JS-->
 <script src="{{ asset('app-assets/vendors/js/ui/prism.min.js') }}"></script>
+<script src="{{ asset('app-assets/vendors/js/extensions/sweetalert.min.js') }}"></script>
 <!-- END PAGE VENDOR JS-->
 <!-- BEGIN MODERN JS-->
 <script src="{{ asset('app-assets/js/core/app-menu.js') }}"></script>

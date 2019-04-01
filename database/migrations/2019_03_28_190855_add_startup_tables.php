@@ -15,14 +15,14 @@ class AddStartupTables extends Migration
     {
         Schema::create('departements',function (Blueprint $table){
             $table->bigIncrements('id');
-            $table->string('nom',20)->unique();
+            $table->string('nom',100)->unique();
             $table->softDeletes();
             $table->timestamps();
         });
 
         Schema::create('filieres',function (Blueprint $table){
             $table->bigIncrements('id');
-            $table->string('nom',20)->unique();
+            $table->string('nom',100)->unique();
             $table->unsignedBigInteger('departement_id')->index();
             $table->foreign('departement_id')->references('id')->on('departements')->onDelete('cascade');
             $table->softDeletes();
@@ -32,14 +32,14 @@ class AddStartupTables extends Migration
         Schema::create('parcours',function (Blueprint $table){
             //Licence-Master-Doctorat
             $table->bigIncrements('id');
-            $table->string('nom',20)->unique();
+            $table->string('nom',100)->unique();
             $table->softDeletes();
         });
 
         Schema::create('cycles',function (Blueprint $table){
             //L1-L2-L3-M1-M2-...
             $table->bigIncrements('id');
-            $table->string('nom',20)->unique();
+            $table->string('nom',100)->unique();
             $table->unsignedBigInteger('parcours_id');
             $table->unsignedBigInteger('previous_cycle_id')->nullable();
             $table->unsignedBigInteger('next_cycle_id')->nullable();
@@ -49,7 +49,7 @@ class AddStartupTables extends Migration
         Schema::create('semestres',function (Blueprint $table){
             //S1-S2-S3-S4-...
             $table->bigIncrements('id');
-            $table->string('nom',20)->unique();
+            $table->string('nom',100)->unique();
             $table->unsignedBigInteger('cycle_id');
             $table->softDeletes();
         });
@@ -60,7 +60,7 @@ class AddStartupTables extends Migration
             $table->string('prenoms');
             $table->date('date_nsce');
             $table->string('contact')->nullable();
-            $table->string('email',20)->unique();
+            $table->string('email',100)->unique();
             $table->unsignedBigInteger('departement_id');
             $table->unsignedBigInteger('filiere_id');
             $table->unsignedBigInteger('cycle_id');
