@@ -93,8 +93,8 @@
                                                     <td>@{{ credit.credits }}</td>
                                                     <td>
                                                         <div class="btn-group" role="group">
-                                                            <button class="btn btn-icon btn-info mr-1 btn-sm"><i class="ft-camera"></i></button>
-                                                            <button class="btn btn-icon btn-danger mr-1 btn-sm"><i class="ft-camera"></i></button>
+                                                            <button class="btn btn-icon btn-info mr-1 btn-sm" data-toggle="tooltip" data-placement="top" data-original-toggle="Modifier"><i class="icon-pencil"></i></button>
+                                                            <button class="btn btn-icon btn-danger mr-1 btn-sm"><i class="icon-close"></i></button>
                                                         </div>
 
                                                     </td>
@@ -475,7 +475,7 @@
                     </li>
                     <li class="breadcrumb-item"><a href="#">Project</a>
                     </li>--}}
-                    <li class="breadcrumb-item active">Attribution des crédits pour chaque filières par matiere et par semestre.
+                    <li class="breadcrumb-item active">Attribution des crédits pour chaque filière par matiere et par semestre.
                     </li>
                 </ol>
             </div>

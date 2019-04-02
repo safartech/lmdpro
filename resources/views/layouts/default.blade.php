@@ -21,9 +21,11 @@
     <!-- BEGIN Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/menu/menu-types/vertical-menu-modern.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/colors/palette-gradient.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/colors/palette-tooltip.css') }}">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/fonts/simple-line-icons/style.min.css') }}">
+    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">--}}
     <!-- END Custom CSS-->
     @yield('css')
 </head>
@@ -60,6 +62,7 @@
 <!-- BEGIN PAGE VENDOR JS-->
 <script src="{{ asset('app-assets/vendors/js/ui/prism.min.js') }}"></script>
 <script src="{{ asset('app-assets/vendors/js/extensions/sweetalert.min.js') }}"></script>
+<script src="{{ asset('app-assets/js/scripts/tooltip/tooltip.js') }}"></script>
 <!-- END PAGE VENDOR JS-->
 <!-- BEGIN MODERN JS-->
 <script src="{{ asset('app-assets/js/core/app-menu.js') }}"></script>
