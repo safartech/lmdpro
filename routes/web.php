@@ -31,6 +31,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('PageInscription', function () {
+    return view('app/inscription');
+})->name('inscription');
+
 
 Route::group(['middleware'=>'auth'],function (){
     Route::get('credits','CreditController@showCreditsPage')->name('credits');
@@ -39,7 +43,9 @@ Route::group(['middleware'=>'auth'],function (){
         Route::group(['prefix'=>'credit'],function(){
             Route::get('load_datas','CreditController@loadDatas');
             Route::post('add_credit','CreditController@addCredit');
+
         });
+        Route::get('inscription', 'InscriptionController@index');
     });
 });
 

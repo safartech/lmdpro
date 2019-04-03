@@ -5,6 +5,16 @@
             <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Templates</span></a></li>
             <li class=" navigation-header"><span data-i18n="nav.category.admin-panels">SYSTEME LMD</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Admin Panels"></i>
             </li>
+            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Inscription</span></a>
+                <ul class="menu-content">
+                    <li><a class="menu-item" href="{{route('inscription')}}" data-i18n="nav.templates.vert.main">Nouvelle Inscription</a>
+
+                    </li>
+                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Ré-Inscription</a>
+
+                    </li>
+                </ul>
+            </li>
             <li class=" nav-item"><a href="{{ route('credits') }}"><i class="la la-shopping-cart"></i><span class="menu-title" data-i18n="">Crédits</span></a>
             </li>
             <li class=" nav-item"><a href="../travel-menu-template"><i class="la la-plane"></i><span class="menu-title" data-i18n="">Travel &amp; Booking</span></a>
