@@ -10,6 +10,6 @@ class Ue extends Model
     public $timestamps = false;
 
     public function matieres(){
-        return $this->hasMany(Matiere::class);
+        return $this->hasMany(Matiere::class)->orderBy('nom');
     }
 }

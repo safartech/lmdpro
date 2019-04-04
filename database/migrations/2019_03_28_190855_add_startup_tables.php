@@ -60,8 +60,9 @@ class AddStartupTables extends Migration
             $table->string('prenoms');
             $table->date('date_nsce');
             $table->string('contact')->nullable();
-            $table->string('email',100)->unique();
-            $table->unsignedBigInteger('departement_id');
+            $table->string('adresse')->nullable();
+            $table->string('email')->nullable()->unique();
+            $table->unsignedBigInteger('departement_id')->nullable();
             $table->unsignedBigInteger('filiere_id');
             $table->unsignedBigInteger('cycle_id');
             $table->softDeletes();
@@ -114,15 +115,16 @@ class AddStartupTables extends Migration
 
         Schema::create('notes',function (Blueprint $table){
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('inscription_id');
             $table->unsignedBigInteger('annee_id');
             $table->unsignedBigInteger('etudiant_id');
 
+            $table->unsignedBigInteger('credit_id');
             $table->unsignedBigInteger('filiere_id')->nullable();
             $table->unsignedBigInteger('semestre_id');
-            $table->unsignedBigInteger('ue_id');
             $table->unsignedBigInteger('matiere_id');
+            $table->unsignedBigInteger('ue_id')->nullable();
             $table->unsignedTinyInteger('credits');
-            $table->unsignedBigInteger('credit_id');
 
             $table->unsignedTinyInteger('devoir')->nullable();
             $table->unsignedTinyInteger('examen')->nullable();
@@ -139,7 +141,6 @@ class AddStartupTables extends Migration
             $table->unsignedBigInteger('annee_id');
             $table->unsignedBigInteger('etudiant_id');
             $table->unsignedBigInteger('cycle_id');
-            $table->unsignedBigInteger('matiere_id');
             $table->unsignedBigInteger('filiere_id');
            $table->softDeletes();
            $table->timestamps();
@@ -147,7 +148,7 @@ class AddStartupTables extends Migration
 
         Schema::create('annees',function (Blueprint $table){
            $table->bigIncrements('id');
-            $table->unsignedBigInteger('annee');
+            $table->string('annee');
            $table->softDeletes();
            $table->timestamps();
         });

@@ -11,15 +11,15 @@ class Credit extends Model
     protected $guarded = ['id'];
 
     public function filiere(){
-        return $this->belongsTo(Filiere::class);
+        return $this->belongsTo(Filiere::class)->orderBy('nom');
     }
 
     public function semestre(){
-        return $this->belongsTo(Semestre::class);
+        return $this->belongsTo(Semestre::class)->orderBy('id');
     }
 
     public function matiere(){
-        return $this->belongsTo(Matiere::class);
+        return $this->belongsTo(Matiere::class)->orderBy('ue_id');
     }
 
 

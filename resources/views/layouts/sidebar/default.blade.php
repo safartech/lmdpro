@@ -7,7 +7,7 @@
             </li>
             <li class=" nav-item"><a href="{{ route('credits') }}"><i class="la la-shopping-cart"></i><span class="menu-title" data-i18n="">Crédits</span></a>
             </li>
-            <li class=" nav-item"><a href="../travel-menu-template"><i class="la la-plane"></i><span class="menu-title" data-i18n="">Travel &amp; Booking</span></a>
+            <li class=" nav-item"><a href="{{ route('notes') }}"><i class="la la-plane"></i><span class="menu-title" data-i18n="">Notes</span></a>
             </li>
 
 

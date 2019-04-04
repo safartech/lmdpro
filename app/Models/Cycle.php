@@ -8,4 +8,8 @@ class Cycle extends Model
 {
     //
     public $timestamps = false;
+
+    public function semestres(){
+        return $this->hasMany(Semestre::class);
+    }
 }
