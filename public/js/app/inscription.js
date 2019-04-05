@@ -67,7 +67,7 @@ let Inscription={
         loadDatas(){
 
             instance.get('inscription').then(res=>{
-alert('12')
+                console.log(res.data)
             }).catch(err=>{
                 console.log(err.response.data)
             })
@@ -75,7 +75,50 @@ alert('12')
 
     },
     mounted(){
-        this.loadDatas();
+        // Wizard tabs with numbers setup
+        $(".number-tab-steps").steps({
+            headerTag: "h6",
+            bodyTag: "fieldset",
+            transitionEffect: "fade",
+            titleTemplate: '<span class="step">#index#</span> #title#',
+            labels: {
+                finish: 'Submit'
+            },
+            onFinished: function (event, currentIndex) {
+                alert("Form submitted.");
+            }
+        });
+
+// Wizard tabs with icons setup
+        $(".icons-tab-steps").steps({
+            headerTag: "h6",
+            bodyTag: "fieldset",
+            transitionEffect: "fade",
+            titleTemplate: '<span class="step">#index#</span> #title#',
+            labels: {
+                finish: 'Submit'
+            },
+            onFinished: function (event, currentIndex) {
+                alert("Form submitted.");
+            }
+        });
+
+// Vertical tabs form wizard setup
+        $(".vertical-tab-steps").steps({
+            headerTag: "h6",
+            bodyTag: "fieldset",
+            transitionEffect: "fade",
+            stepsOrientation: "vertical",
+            titleTemplate: '<span class="step">#index#</span> #title#',
+            labels: {
+                finish: 'Submit'
+            },
+            onFinished: function (event, currentIndex) {
+                alert("Form submitted.");
+            }
+        });
+        var form = $(".steps-validation").show();
+        // this.loadDatas();
     }
 
     ,

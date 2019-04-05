@@ -31,13 +31,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('PageInscription', function () {
-    return view('app/inscription');
-})->name('inscription');
-
 
 Route::group(['middleware'=>'auth'],function (){
     Route::get('credits','CreditController@showCreditsPage')->name('credits');
+    Route::get('inscription', function () {
+        return view('app/inscription');
+    })->name('inscription');
 
     Route::group(['prefix'=>'ajax'],function(){
         Route::group(['prefix'=>'credit'],function(){

@@ -17,18 +17,17 @@
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/app.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
     <!-- END MODERN CSS-->
     <!-- BEGIN Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/menu/menu-types/vertical-menu-modern.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/menu/menu-types/vertical-menu.css') }}">
+{{--    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/menu/menu-types/vertical-menu.css') }}">--}}
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/colors/palette-gradient.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/colors/palette-tooltip.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/plugins/forms/wizard.css')}}">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/fonts/simple-line-icons/style.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
-    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">--}}
+{{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">--}}
     <!-- END Custom CSS-->
     @yield('css')
 </head>
@@ -75,18 +74,6 @@
 <script src="{{ asset('js/axios.min.js') }}"></script>
 <script src="{{ asset('js/vue.js') }}"></script>
 
-
-<script src="{{asset('app-assets/vendors/js/extensions/jquery.steps.min.js')}}"></script>
-<script src="{{asset('app-assets/vendors/js/pickers/dateTime/moment-with-locales.min.js')}}"></script>
-<script src="{{asset('app-assets/vendors/js/pickers/daterange/daterangepicker.js')}}"></script>
-<script src="{{asset('app-assets/vendors/js/forms/validation/jquery.validate.min.js')}}"></script>
-<!-- END PAGE VENDOR JS-->
-<!-- BEGIN MODERN JS-->
-<script src="{{asset('app-assets/js/core/app-menu.js')}}"></script>
-<script src="{{asset('app-assets/js/core/app.js')}}"></script>
-<!-- END MODERN JS-->
-<!-- BEGIN PAGE LEVEL JS-->
-<script src="{{asset('app-assets/js/sccdripts/forms/wizard-steps.js')}}"></script>
 
 @yield('js')
 <!-- END PAGE LEVEL JS-->
