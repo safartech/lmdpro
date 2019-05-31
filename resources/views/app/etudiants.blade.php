@@ -4,27 +4,92 @@
 @section('js')
 
     <template id="etudiant">
-        <div>
-            WELCOME TO LMDPRO
-            <section id="description" class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Description</h4>
-                </div>
-                <div class="card-content">
-                    <div class="card-body">
-                        <div class="card-text">
-                            <p>Bordered navigation separate first level of main navigation by adding border. You can check bordered
-                                navigation on left side navigation menu.</p>
+        <div class="row">
+            <div class="modal fade text-left" id="inlineForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <label class="modal-title text-text-bold-600" id="myModalLabel33">Inline Login Form</label>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <div class="alert bg-success alert-icon-left mb-2" role="alert">
-                            <span class="alert-icon"><i class="la la-pencil-square"></i></span>
-                            <strong>Experience it!</strong>
-                            <p>This page contain navigation menu with bordered options example, check at the left hand side of the
-                                page.</p>
+                        <form action="#">
+                            <div class="modal-body">
+                                <label>Nom: </label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Email Address" class="form-control" v-model="updateEtudiant.etunom">
+                                </div>
+                                <label>Prenoms: </label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Email Address" class="form-control" v-model="updateEtudiant.etup">
+                                </div>
+
+                                <label>Email: </label>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Email" class="form-control" v-model="updateEtudiant.etumail">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="Annuler">
+                                <input type="submit" class="btn btn-outline-primary btn-lg" value="Modifier" @click="Edit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Table head options with primary background</h4>
+                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                        <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                <li><a data-action="close"><i class="ft-x"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body">
+
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="bg-primary white">
+                                <tr>
+                                    <th>N°</th>
+                                    <th>Nom & Prenom</th>
+                                    <th>Sexe</th>
+                                    <th>Departement</th>
+                                    <th>Filiere</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr v-for="(Etudiant,i) in Etudiants">
+                                    <td>@{{ i+1 }}</td>
+                                    <td>@{{ Etudiant.etunom }}  @{{Etudiant.etup}}</td>
+                                    <td>@{{ Etudiant.etusexe }}</td>
+                                    <td>@{{ Etudiant.depnom }}</td>
+                                    <td>@{{ Etudiant.filnom }} | @{{ Etudiant.cyclenom }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-min-width mr-1 mb-1" @click="showEditorModal(Etudiant)"><i class="la la-edit"></i>  Info</button>
+                                        <button type="button" class="btn btn-danger btn-min-width mr-1 mb-1"><i class="la la-trash"></i>  Danger</button>
+                                    </td>
+                                </tr>
+
+
+
+                                </tbody>
+                            </table>
+
                         </div>
                     </div>
                 </div>
-            </section>!
+            </div>
         </div>
     </template>
 
@@ -34,28 +99,18 @@
 
 @section('header')
     <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
-        <h3 class="content-header-title mb-0 d-inline-block">Bordered Navigation</h3>
+        <h3 class="content-header-title mb-0 d-inline-block">LMD PRO</h3>
         <div class="row breadcrumbs-top d-inline-block">
             <div class="breadcrumb-wrapper col-12">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a>
+                    <li class="breadcrumb-item"><a href="index.html">Etudiants</a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Navigation</a>
-                    </li>
-                    <li class="breadcrumb-item active">Bordered Navigation
-                    </li>
+
                 </ol>
             </div>
         </div>
     </div>
-    <div class="content-header-right col-md-6 col-12">
-        <div class="btn-group float-md-right">
-            <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
-            <div class="dropdown-menu arrow"><a class="dropdown-item" href="#"><i class="fa fa-calendar-check mr-1"></i> Calender</a><a class="dropdown-item" href="#"><i class="fa fa-cart-plus mr-1"></i> Cart</a><a class="dropdown-item" href="#"><i class="fa fa-life-ring mr-1"></i> Support</a>
-                <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-cog mr-1"></i> Settings</a>
-            </div>
-        </div>
-    </div>
+
 @endsection
 
 @section('content')

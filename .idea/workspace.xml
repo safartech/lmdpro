@@ -537,15 +537,22 @@
       <workItem from="1554147841575" duration="13997000" />
       <workItem from="1554204035109" duration="2236000" />
       <workItem from="1554220714591" duration="14495000" />
-      <workItem from="1554297657225" duration="5476000" />
+      <workItem from="1554297657225" duration="6074000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="87352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="84083000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="916" extended-state="1" />
+>>>>>>> Stashed changes
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42511347" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

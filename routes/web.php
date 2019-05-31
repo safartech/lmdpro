@@ -34,6 +34,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>'auth'],function (){
     Route::get('credits','CreditController@showCreditsPage')->name('credits');
+    Route::get('Etudiants','EtudiantController@showEtudiantPage')->name('Etudiants');
     Route::get('inscription', function () {
         return view('app/inscription');
     })->name('inscription');
@@ -43,8 +44,11 @@ Route::group(['middleware'=>'auth'],function (){
             Route::get('load_datas','CreditController@loadDatas');
             Route::post('add_credit','CreditController@addCredit');
 
+
         });
-        Route::get('inscription', 'InscriptionController@index');
+        Route::get('inscriptionEtudiant', 'InscriptionController@index');
+        Route::post('add_etudiant', 'InscriptionController@store');
     });
+
 });
 
