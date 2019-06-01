@@ -17,15 +17,17 @@
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/app.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
     <!-- END MODERN CSS-->
     <!-- BEGIN Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/menu/menu-types/vertical-menu-modern.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/menu/menu-types/vertical-menu.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/colors/palette-gradient.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/colors/palette-tooltip.css') }}">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/fonts/simple-line-icons/style.min.css') }}">
-    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">--}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
     <!-- END Custom CSS-->
     @yield('css')
 </head>
@@ -71,6 +73,8 @@
 <!-- BEGIN PAGE LEVEL JS-->
 <script src="{{ asset('js/axios.min.js') }}"></script>
 <script src="{{ asset('js/vue.js') }}"></script>
+
+
 @yield('js')
 <!-- END PAGE LEVEL JS-->
 </body>

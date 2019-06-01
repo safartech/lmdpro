@@ -34,7 +34,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>'auth'],function (){
     Route::get('credits','CreditController@showCreditsPage')->name('credits');
+
     Route::get('etudiants','EtudiantController@showEtudiantsPage')->name('etudiants');
+    Route::get('Etudiants','EtudiantController@showEtudiantPage')->name('Etudiants');
 
     Route::group(['prefix'=>'ajax'],function(){
         Route::group(['prefix'=>'credit'],function(){
@@ -46,6 +48,8 @@ Route::group(['middleware'=>'auth'],function (){
             Route::get('load_datas','EtudiantController@loadDatas');
             Route::post('update_etudiant', 'EtudiantController@updateEtudiant');
             Route::post('delete_etudiant', 'EtudiantController@deleteEtudiant');
-        });
+        });      
+
     });
+
 });

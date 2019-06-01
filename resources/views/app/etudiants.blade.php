@@ -34,6 +34,7 @@
 <script src="app-assets/js/scripts/modal/components-modal.js"></script>
 
     <template id="etudiant">
+
         <div>
             <section id="description" class="card">
                 <div class="card-content">
@@ -93,6 +94,7 @@
                             </div>
                         </form>
                     </div>
+
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered">
@@ -125,7 +127,6 @@
                       </div>
                   </div>
               </div>
-
 
               <!--  Modal de mise a jour -->
               <div class="modal fade text-left " id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
@@ -507,6 +508,7 @@
   </template>
 
     <script type="module" src="{{ asset('js/app/etudiants.js') }}"></script>
+
 @endsection
 
 @section('content')

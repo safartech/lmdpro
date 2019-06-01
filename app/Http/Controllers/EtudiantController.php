@@ -30,7 +30,6 @@ class EtudiantController extends Controller
         $domaines = Domaine::get();
         $mentions = Mention::get();
 
-
         return compact('inscriptions', 'annees', 'cycles', 'type_parcours', 'filieres', 'domaines', 'mentions');
     }
 

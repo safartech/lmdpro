@@ -1,14 +1,16 @@
+
 /**
  * Created by User on 30/03/2019.
  */
 
 import {url} from '../base_url.js'
+
 let instance = axios.create({
     baseURL : url
 });
 
-let Etudiant = {
-    template:'#etudiant',
+let Etudiant={
+    template:"#etudiant",
     data(){
         return {
             etudiants:[],
@@ -166,13 +168,18 @@ let Etudiant = {
     }
 }
 
-new Vue({
-    el:'#app',
-    data:{},
-    mounted(){
+new Vue(
+{
+    el:"#app",
+    data:{
 
     },
+    methods: {
+
+    },
+
     components:{
         Etudiant
     }
+
 })
